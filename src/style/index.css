@@ -1,0 +1,236 @@
+/* All selectors are scoped: the federated remote must not restyle CARE. */
+.care-pressure-sore-fe {
+  color: #1f2937;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.care-pressure-sore-fe * {
+  box-sizing: border-box;
+}
+.care-pressure-sore-fe .ps-help {
+  margin: 0 0 16px;
+  color: #4b5563;
+}
+.care-pressure-sore-fe .ps-layout {
+  display: grid;
+  grid-template-columns: minmax(240px, 340px) minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+.care-pressure-sore-fe .ps-anatomy {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+  background: #f9fafb;
+}
+.care-pressure-sore-fe .ps-maps {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+.care-pressure-sore-fe figure {
+  margin: 0;
+  min-width: 0;
+}
+.care-pressure-sore-fe figcaption {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.care-pressure-sore-fe svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.care-pressure-sore-fe path {
+  fill: #d1d5db;
+  stroke: transparent;
+  stroke-width: 2;
+}
+.care-pressure-sore-fe path[data-recorded="true"] {
+  fill: #fdba74;
+  stroke: #9a3412;
+}
+.care-pressure-sore-fe path[data-selected="true"] {
+  fill: #6ee7b7;
+  stroke: #065f46;
+  stroke-width: 4;
+}
+.care-pressure-sore-fe path[role="button"] {
+  cursor: pointer;
+}
+.care-pressure-sore-fe path[role="button"]:hover {
+  stroke: #374151;
+  stroke-width: 4;
+}
+.care-pressure-sore-fe path[role="button"]:focus-visible {
+  outline: none;
+  stroke: #1d4ed8;
+  stroke-width: 6;
+}
+.care-pressure-sore-fe .ps-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 16px 0;
+  font-size: 12px;
+}
+.care-pressure-sore-fe .ps-legend span::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border: 1px solid;
+  margin-right: 5px;
+}
+.care-pressure-sore-fe .ps-recorded-key::before {
+  background: #fdba74;
+  border-color: #9a3412;
+}
+.care-pressure-sore-fe .ps-selected-key::before {
+  background: #6ee7b7;
+  border-color: #065f46;
+}
+.care-pressure-sore-fe .ps-add {
+  display: grid;
+  gap: 8px;
+}
+.care-pressure-sore-fe .ps-rows {
+  display: grid;
+  gap: 12px;
+  min-width: 0;
+}
+.care-pressure-sore-fe .ps-sore {
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 16px;
+  background: white;
+  break-inside: avoid;
+}
+.care-pressure-sore-fe header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.care-pressure-sore-fe h4 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+.care-pressure-sore-fe .ps-fields {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.care-pressure-sore-fe .ps-wide {
+  grid-column: 1 / -1;
+}
+.care-pressure-sore-fe label,
+.care-pressure-sore-fe dt {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.care-pressure-sore-fe dd {
+  margin: 0;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+.care-pressure-sore-fe input:not([type="checkbox"]),
+.care-pressure-sore-fe select,
+.care-pressure-sore-fe textarea {
+  width: 100%;
+  border: 1px solid #9ca3af;
+  border-radius: 6px;
+  padding: 8px 10px;
+  background: white;
+  color: #111827;
+  font: inherit;
+  min-height: 40px;
+}
+.care-pressure-sore-fe textarea {
+  resize: vertical;
+}
+.care-pressure-sore-fe button {
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 8px 12px;
+  background: white;
+  cursor: pointer;
+  font: inherit;
+  min-height: 40px;
+}
+.care-pressure-sore-fe button.ps-primary {
+  background: #047857;
+  border-color: #047857;
+  color: white;
+  font-weight: 600;
+}
+.care-pressure-sore-fe button.ps-remove {
+  color: #991b1b;
+  font-size: 12px;
+}
+.care-pressure-sore-fe :disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+.care-pressure-sore-fe :is(button, input, select, textarea):focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+.care-pressure-sore-fe [aria-invalid="true"] {
+  border-color: #b91c1c !important;
+}
+.care-pressure-sore-fe .ps-errors {
+  color: #b91c1c;
+  font-size: 12px;
+}
+.care-pressure-sore-fe .ps-area {
+  margin: 12px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid #e5e7eb;
+}
+.care-pressure-sore-fe .ps-empty {
+  text-align: center;
+  padding: 40px 16px;
+  color: #4b5563;
+  border: 1px dashed #d1d5db;
+  border-radius: 10px;
+}
+.care-pressure-sore-fe .ps-required {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+@media (max-width: 640px) {
+  .care-pressure-sore-fe .ps-layout {
+    grid-template-columns: 1fr;
+  }
+  .care-pressure-sore-fe .ps-anatomy {
+    max-width: 340px;
+    width: 100%;
+    margin: auto;
+  }
+}
+@media print {
+  .care-pressure-sore-fe .ps-help,
+  .care-pressure-sore-fe .ps-add,
+  .care-pressure-sore-fe button {
+    display: none;
+  }
+  .care-pressure-sore-fe .ps-layout {
+    display: block;
+  }
+  .care-pressure-sore-fe .ps-anatomy {
+    max-width: 260px;
+    margin: 0 auto 12px;
+  }
+  .care-pressure-sore-fe .ps-rows {
+    display: block;
+  }
+  .care-pressure-sore-fe .ps-sore {
+    margin-bottom: 12px;
+  }
+}
